@@ -12,6 +12,16 @@ import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 */
 
+import org.iesalandalus.programacion.matriculacion.MainApp;
+import org.iesalandalus.programacion.matriculacion.dominio.Alumno;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import javax.naming.OperationNotSupportedException;
+import java.time.LocalDate;
+
+import static org.junit.jupiter.api.Assertions.*;
+
 public class AlumnosTest {
 
     private static final String ERROR_CAPACIDAD_NO_CORRECTA = "ERROR: La capacidad debe ser mayor que cero.";

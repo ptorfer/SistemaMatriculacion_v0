@@ -3,6 +3,8 @@ package org.iesalandalus.programacion.matriculacion.dominio;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,6 +35,7 @@ public class Alumno {
     }
 
     public Alumno(Alumno alumno){
+        Objects.requireNonNull(alumno,"ERROR: No es posible copiar un alumno nulo.");
         setNombre(alumno.getNombre());
         setDni(alumno.getDni());
         setCorreo(alumno.getCorreo());
@@ -41,7 +44,6 @@ public class Alumno {
     }
 
     //Métodos
-
 
     public String getNia() {
         return nia;
@@ -63,6 +65,10 @@ public class Alumno {
     }
 
     public void setNombre(String nombre) {
+        Objects.requireNonNull(nombre,"ERROR: El nombre de un alumno no puede ser nulo.");
+        if (nombre.isEmpty()){
+            throw new IllegalArgumentException("ERROR: El nombre de un alumno no puede estar vacío.");
+        }
         this.nombre = formateaNombre(nombre);
     }
 
@@ -93,6 +99,10 @@ public class Alumno {
     }
 
     public void setTelefono(String telefono) {
+        Objects.requireNonNull(telefono,"ERROR: El teléfono de un alumno no puede ser nulo.");
+        if (!telefono.matches(ER_TELEFONO)){
+            throw new IllegalArgumentException("ERROR: El teléfono del alumno no tiene un formato válido.");
+        }
         this.telefono = telefono;
     }
 
@@ -101,6 +111,10 @@ public class Alumno {
     }
 
     public void setCorreo(String correo) {
+        Objects.requireNonNull(correo,"ERROR: El correo de un alumno no puede ser nulo.");
+        if (!correo.matches(ER_CORREO)){
+            throw new IllegalArgumentException("ERROR: El correo del alumno no tiene un formato válido.");
+        }
         this.correo = correo;
     }
 
@@ -109,6 +123,13 @@ public class Alumno {
     }
 
     public void setDni(String dni) {
+        Objects.requireNonNull(dni,"ERROR: El dni de un alumno no puede ser nulo.");
+        if(dni.matches(ER_DNI)){
+            throw new IllegalArgumentException("ERROR: El dni del alumno no tiene un formato válido.");
+        }
+        if(!comprobarLetraDni(dni)){
+            throw new IllegalArgumentException("ERROR: La letra del dni del alumno no es correcta.");
+        }
         this.dni = dni;
     }
 
@@ -120,33 +141,31 @@ public class Alumno {
 
         //Compilo la expresión regular en un patrón
         patron = Pattern.compile(ER_DNI);
-        do {
-            System.out.print("Introduce un DNI: ");
-            dni = Entrada.cadena();
-            //Creo un objeto Matcher con la cadena (dni) y el patrón para luego poder verificar si la cadena coincide con el patrón.
-            comparador = patron.matcher(dni);
-            //El metodo matches() verifica si toda la cadena coincide con el patrón. Si lo hace devuelve true.
-        } while (!comparador.matches());
 
+        //Creo un objeto Matcher con la cadena (dni) y el patrón para luego poder verificar si la cadena coincide con el patrón.
+        comparador = patron.matcher(dni);
+
+        //El metodo matches() verifica si toda la cadena coincide con el patrón. Si lo hace devuelve true.
         if (comparador.matches()){
 
             String numeroDni= comparador.group(1);
-            String letraDni= comparador.group(2);
-            System.out.printf("Número dni: %s%n", numeroDni);
-            System.out.printf("Letra dni: %s%n", letraDni);
+            char letraDni= comparador.group(2).charAt(0);
 
             //Para calcular si la letra es válida:
             final char[] LETRAS_DNI = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
 
-            int letraCalculada = Integer.valueOf(letraDni) % 23;
+            int indice = Integer.valueOf(letraDni) % 23;
 
-            System.out.println(LETRAS_DNI[letraCalculada]);
+            char letraCalculada=LETRAS_DNI[indice];
 
-            if (letraDni.equals(letraCalculada)){
-                return true; //La letra del dni es correcta.
+            if(letraDni==letraCalculada){
+                return true;
+            }
+            else{
+                return false;
             }
         }
-        return false; //la letra del dni no es correcta.
+        return false; //No toda la cadena coincide con el patrón.
     }
 
     public LocalDate getFechaNacimiento() {
@@ -154,6 +173,14 @@ public class Alumno {
     }
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
+
+        Objects.requireNonNull(fechaNacimiento,"La fecha de nacimiento de un alumno no puede ser nula.");
+        //Voy a calcular los años desde el nacimiento hasta la fecha actual.
+        Period periodo=Period.between(fechaNacimiento,LocalDate.now());
+        int anio = periodo.getYears();
+        if (!(anio>=MIN_EDAD_ALUMNADO)){
+            throw new IllegalArgumentException ("ERROR: La edad del alumno debe ser mayor o igual a 16 años.");
+        }
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -185,13 +212,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" +
-                "nombre='" + nombre + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", correo='" + correo + '\'' +
-                ", dni='" + dni + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", nia='" + nia + '\'' +
-                '}';
+
+        return String.format("Número de Identificación del Alumnado (NIA)=%s " + "nombre=%s (%s), DNI=%s, correo=%s, teléfono=%s, fecha nacimiento=%s", this.getNia(), this.getNombre(), this.getIniciales(), this.getDni(), this.getCorreo(), this.getTelefono(), this.getFechaNacimiento().format(DateTimeFormatter.ofPattern(FORMATO_FECHA)));
     }
 }
