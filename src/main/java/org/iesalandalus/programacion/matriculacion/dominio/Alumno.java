@@ -49,15 +49,26 @@ public class Alumno {
         return nia;
     }
 
-    public void setNia() {
-        //En las substring la posición desde no está incluida.
-        String parteNombre=getNombre().substring(0,4).toLowerCase();
-        String parteDni=getDni().substring(5,8);
-        String nia=parteNombre+parteDni;
+    private void setNia() {
+
+        if(nia.matches(ER_NIA)){
+            //En las substring la posición desde no está incluida.
+            String parteNombre=getNombre().substring(0,4).toLowerCase();
+            String parteDni=getDni().substring(5,8);
+            this.nia=parteNombre+parteDni;
+        }
+        else{
+            throw new IllegalArgumentException("El cálculo del Número de Identificación del Alumno no es el correcto.");
+        }
     }
 
-    public void setNia(String nia) {
-        this.nia = nia;
+    private void setNia(String nia) {
+        if (nia.matches(ER_NIA)) {
+            this.nia = nia;
+        }
+        else{
+            throw new IllegalArgumentException("Nia incorrecto.");
+        }
     }
 
     public String getNombre() {
@@ -100,10 +111,12 @@ public class Alumno {
 
     public void setTelefono(String telefono) {
         Objects.requireNonNull(telefono,"ERROR: El teléfono de un alumno no puede ser nulo.");
-        if (!telefono.matches(ER_TELEFONO)){
+        if (telefono.matches(ER_TELEFONO)) {
+            this.telefono = telefono;
+        }
+        else {
             throw new IllegalArgumentException("ERROR: El teléfono del alumno no tiene un formato válido.");
         }
-        this.telefono = telefono;
     }
 
     public String getCorreo() {

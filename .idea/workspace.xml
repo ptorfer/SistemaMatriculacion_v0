@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Actualización">
+    <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Creación clase Asignatura.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/matriculacion/dominio/AsignaturaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/matriculacion/dominio/AsignaturaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/patri/Documents/Z1_2DAM/PR/1.Trimestre/Unidad4/TareaOnline/Torres_Fernandez_Patricia_PROG_Tarea04",
+    "last_opened_file_path": "C:/Users/patri/Documents/Z5_Otros/1.DAM/PR/Unidad 8/Torres_Fernandez_Patricia_PROG_Tarea08/ReservasHotel-v6",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.32988507",
@@ -266,12 +266,21 @@
       <option name="project" value="LOCAL" />
       <updated>1731779712904</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Creación clase Asignatura.">
+      <option name="closed" value="true" />
+      <created>1731785424075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731785424075</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creación enumerado EspecialidadProfesorado" />
     <MESSAGE value="Actualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
+    <MESSAGE value="Creación clase Asignatura." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación clase Asignatura." />
   </component>
 </project>
