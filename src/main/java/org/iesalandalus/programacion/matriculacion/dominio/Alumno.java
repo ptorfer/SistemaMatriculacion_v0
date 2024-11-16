@@ -32,6 +32,7 @@ public class Alumno {
         setCorreo(correo);
         setTelefono(telefono);
         setFechaNacimiento(fechaNacimiento);
+        setNia();
     }
 
     public Alumno(Alumno alumno){
@@ -41,6 +42,7 @@ public class Alumno {
         setCorreo(alumno.getCorreo());
         setTelefono(alumno.getTelefono());
         setFechaNacimiento(alumno.getFechaNacimiento());
+        setNia(alumno.getNia());
     }
 
     //Métodos
