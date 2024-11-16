@@ -5,8 +5,10 @@ public enum Grado {
     GDCFGM ("GDCFGM"),
     GDCFGS ("GDCFGS");
 
+    //Atributo
     private String cadenaAMostrar;
 
+    //Constructor
     private Grado (String cadenaAMostrar){
         this.cadenaAMostrar=cadenaAMostrar;
     }

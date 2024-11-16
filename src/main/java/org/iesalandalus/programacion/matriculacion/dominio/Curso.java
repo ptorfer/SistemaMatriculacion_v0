@@ -5,8 +5,10 @@ public enum Curso {
     PRIMERO ("PRIMERO"),
     SEGUNDO ("SEGUNDO");
 
+    //Atributo
     private String cadenaAMostrar;
 
+    //Constructor
     private Curso (String cadenaAMostrar){
         this.cadenaAMostrar=cadenaAMostrar;
     }
