@@ -20,8 +20,6 @@ public enum Curso {
 
     @Override
     public String toString() {
-        return "Curso{" +
-                "cadenaAMostrar='" + cadenaAMostrar + '\'' +
-                '}';
+        return String.format("Curso=%s",cadenaAMostrar);
     }
 }
