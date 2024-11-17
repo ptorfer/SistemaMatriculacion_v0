@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Actualización">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/CicloFormativo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/CicloFormativo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Grado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Grado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Alumnos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Alumnos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.AlumnoTest.executor": "Run",
+    "Gradle.AlumnosTest.executor": "Run",
     "Gradle.CicloFormativoTest.executor": "Run",
     "Gradle.CursoTest.executor": "Run",
     "Gradle.EspecialidadProfesoradoTest.executor": "Run",
@@ -74,14 +71,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/patri/Documents/Z1_2DAM/PR/1.Trimestre/Unidad3/TareaOnline",
+    "last_opened_file_path": "C:/Users/patri/Documents/Z5_Otros/1.DAM/PR/Unidad 4/A. ReservasHotel_v0",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.32988507",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.AlumnoTest">
+  <component name="RunManager" selected="Gradle.AlumnosTest">
     <configuration name="AlumnoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -106,6 +103,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="AlumnosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.iesalandalus.programacion.matriculacion.negocio.AlumnosTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="CicloFormativoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -120,30 +141,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.iesalandalus.programacion.matriculacion.dominio.CicloFormativoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="CursoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.iesalandalus.programacion.matriculacion.dominio.CursoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -215,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AlumnosTest" />
         <item itemvalue="Gradle.AlumnoTest" />
         <item itemvalue="Gradle.MatriculaTest" />
         <item itemvalue="Gradle.EspecialidadProfesoradoTest" />
         <item itemvalue="Gradle.CicloFormativoTest" />
-        <item itemvalue="Gradle.CursoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -296,12 +293,29 @@
       <option name="project" value="LOCAL" />
       <updated>1731795728241</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Creación clase Matrícula">
+      <option name="closed" value="true" />
+      <created>1731845347571</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731845347571</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Actualización">
+      <option name="closed" value="true" />
+      <created>1731845366598</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731845366598</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creación enumerado EspecialidadProfesorado" />
     <MESSAGE value="Creación clase Asignatura." />
+    <MESSAGE value="Creación clase Matrícula" />
     <MESSAGE value="Actualización" />
     <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
   </component>
