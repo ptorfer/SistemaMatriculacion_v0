@@ -29,7 +29,8 @@ public class Asignatura {
     }
 
     public Asignatura(Asignatura asignatura){
-        Objects.requireNonNull("ERROR: No es posible copiar una asignatura nula.");
+        Objects.requireNonNull(asignatura,"ERROR: No es posible copiar una asignatura nula.");
+
         setCodigo(asignatura.getCodigo());
         setNombre(asignatura.getNombre());
         setHorasAnuales(asignatura.getHorasAnuales());
@@ -39,12 +40,15 @@ public class Asignatura {
         setCicloFormativo(asignatura.getCicloFormativo());
     }
 
+    //Métodos
+
     public CicloFormativo getCicloFormativo() {
         return cicloFormativo;
     }
 
     public void setCicloFormativo(CicloFormativo cicloFormativo) {
-        Objects.requireNonNull("ERROR: El ciclo formativo de una asignatura no puede ser nulo.");
+        Objects.requireNonNull(cicloFormativo, "ERROR: El ciclo formativo de una asignatura no puede ser nulo.");
+
         this.cicloFormativo = cicloFormativo;
     }
 
@@ -53,7 +57,8 @@ public class Asignatura {
     }
 
     private void setCodigo(String codigo) {
-        Objects.requireNonNull("ERROR: El código de una asignatura no puede ser nulo.");
+        Objects.requireNonNull(codigo,"ERROR: El código de una asignatura no puede ser nulo.");
+
         if (codigo.isEmpty()) {
             throw new IllegalArgumentException("ERROR: El código de una asignatura no puede estar vacío.");
         }
@@ -68,7 +73,7 @@ public class Asignatura {
     }
 
     public void setNombre(String nombre) {
-        Objects.requireNonNull("ERROR: El nombre de una asignatura no puede ser nulo.");
+        Objects.requireNonNull(nombre,"ERROR: El nombre de una asignatura no puede ser nulo.");
         if (nombre.isEmpty()){
             throw new IllegalArgumentException("ERROR: El nombre de una asignatura no puede estar vacío.");
         }
@@ -93,7 +98,7 @@ public class Asignatura {
     }
 
     public void setCurso(Curso curso) {
-        Objects.requireNonNull("ERROR: El curso de una asignatura no puede ser nulo.");
+        Objects.requireNonNull(curso,"ERROR: El curso de una asignatura no puede ser nulo.");
         this.curso = curso;
     }
 
@@ -114,7 +119,8 @@ public class Asignatura {
     }
 
     public void setEspecialidadProfesorado(EspecialidadProfesorado especialidadProfesorado) {
-        Objects.requireNonNull("ERROR: La especialidad del profesorado de una asignatura no puede ser nula.");
+        Objects.requireNonNull(especialidadProfesorado,"ERROR: La especialidad del profesorado de una asignatura no puede ser nula.");
+
         this.especialidadProfesorado = especialidadProfesorado;
     }
 
@@ -131,14 +137,14 @@ public class Asignatura {
     }
 
     public String imprimir(){
-        return String.format("Código asignatura=%s, nombre asignatura=%s, ciclo formativo=%s", codigo, nombre, cicloFormativo);
+        return String.format("Código asignatura=%s, nombre asignatura=%s, ciclo formativo=%s", this.getCodigo(), this.getNombre(), this.getCicloFormativo().imprimir());
     }
 
     @Override
     public String toString() {
 
-        return String.format("Código=%s, nombre=%s, horas anuales=%d, curso=%s, horas desdoble=%d, ciclo formativo=%s, especialidad profesorado=%s", codigo, nombre,horasAnuales,
-                curso,horasDesdoble, cicloFormativo,especialidadProfesorado);
+        return String.format("Código=%s, nombre=%s, horas anuales=%d, curso=%s, horas desdoble=%d, ciclo formativo=%s, especialidad profesorado=%s", this.getCodigo(), this.getNombre(),this.getHorasAnuales(),
+                this.getCurso(),this.getHorasDesdoble(), this.getCicloFormativo().imprimir(),this.getEspecialidadProfesorado());
     }
 }
 

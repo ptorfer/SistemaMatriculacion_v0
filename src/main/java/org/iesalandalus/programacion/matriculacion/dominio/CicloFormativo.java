@@ -22,7 +22,8 @@ public class CicloFormativo {
     }
 
     public CicloFormativo (CicloFormativo cicloFormativo){
-        Objects.requireNonNull("ERROR: No es posible copiar un ciclo formativo nulo.");
+        Objects.requireNonNull(cicloFormativo,"ERROR: No es posible copiar un ciclo formativo nulo.");
+
         setCodigo(cicloFormativo.getCodigo());
         setFamiliaProfesional(cicloFormativo.getFamiliaProfesional());
         setGrado(cicloFormativo.getGrado());
@@ -51,7 +52,8 @@ public class CicloFormativo {
     }
 
     public void setFamiliaProfesional(String familiaProfesional) {
-        Objects.requireNonNull("ERROR: La familia profesional de un ciclo formativo no puede ser nula.");
+        Objects.requireNonNull(familiaProfesional,"ERROR: La familia profesional de un ciclo formativo no puede ser nula.");
+
         if (familiaProfesional.isEmpty()){
             throw new IllegalArgumentException("ERROR: La familia profesional no puede estar vacía.");
         }
@@ -61,7 +63,6 @@ public class CicloFormativo {
         else{
             throw new IllegalArgumentException("Familia Profesional incorrecta");
         }
-
     }
 
     public Grado getGrado() {
@@ -69,7 +70,7 @@ public class CicloFormativo {
     }
 
     public void setGrado(Grado grado) {
-        Objects.requireNonNull("ERROR: El grado de un ciclo formativo no puede ser nulo.");
+        Objects.requireNonNull(grado,"ERROR: El grado de un ciclo formativo no puede ser nulo.");
         if(grado == Grado.GDCFGB||grado==Grado.GDCFGM||grado==Grado.GDCFGS){
             this.grado = grado;
         }
@@ -83,7 +84,7 @@ public class CicloFormativo {
     }
 
     public void setNombre(String nombre) {
-        Objects.requireNonNull("ERROR: El nombre de un ciclo formativo no puede ser nulo.");
+        Objects.requireNonNull(nombre,"ERROR: El nombre de un ciclo formativo no puede ser nulo.");
         if(nombre.isEmpty()){
             throw new IllegalArgumentException("ERROR: El nombre de un ciclo formativo no puede estar vacío.");
         }

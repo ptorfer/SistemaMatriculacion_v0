@@ -37,6 +37,7 @@ public class Alumno {
 
     public Alumno(Alumno alumno){
         Objects.requireNonNull(alumno,"ERROR: No es posible copiar un alumno nulo.");
+
         setNombre(alumno.getNombre());
         setDni(alumno.getDni());
         setCorreo(alumno.getCorreo());
@@ -79,10 +80,12 @@ public class Alumno {
 
     public void setNombre(String nombre) {
         Objects.requireNonNull(nombre,"ERROR: El nombre de un alumno no puede ser nulo.");
+
         if (nombre.isEmpty()){
             throw new IllegalArgumentException("ERROR: El nombre de un alumno no puede estar vacío.");
         }
-        this.nombre = formateaNombre(nombre);
+        String iniciales=this.getIniciales();
+        this.nombre= formateaNombre(nombre);
     }
 
     private String formateaNombre (String nombre){
@@ -113,6 +116,7 @@ public class Alumno {
 
     public void setTelefono(String telefono) {
         Objects.requireNonNull(telefono,"ERROR: El teléfono de un alumno no puede ser nulo.");
+
         if (telefono.matches(ER_TELEFONO)) {
             this.telefono = telefono;
         }
@@ -127,6 +131,7 @@ public class Alumno {
 
     public void setCorreo(String correo) {
         Objects.requireNonNull(correo,"ERROR: El correo de un alumno no puede ser nulo.");
+
         if (!correo.matches(ER_CORREO)){
             throw new IllegalArgumentException("ERROR: El correo del alumno no tiene un formato válido.");
         }
@@ -137,8 +142,9 @@ public class Alumno {
         return dni;
     }
 
-    public void setDni(String dni) {
+    private void setDni(String dni) {
         Objects.requireNonNull(dni,"ERROR: El dni de un alumno no puede ser nulo.");
+
         if(dni.matches(ER_DNI)){
             throw new IllegalArgumentException("ERROR: El dni del alumno no tiene un formato válido.");
         }
@@ -187,9 +193,10 @@ public class Alumno {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+    private void setFechaNacimiento(LocalDate fechaNacimiento) {
 
         Objects.requireNonNull(fechaNacimiento,"La fecha de nacimiento de un alumno no puede ser nula.");
+
         //Voy a calcular los años desde el nacimiento hasta la fecha actual.
         Period periodo=Period.between(fechaNacimiento,LocalDate.now());
         int anio = periodo.getYears();
@@ -225,9 +232,13 @@ public class Alumno {
         return Objects.hashCode(dni);
     }
 
+    public String imprimir(){
+        return String.format("nombre=%s (%s), DNI=%s, correo=%s, teléfono=%s, fecha nacimiento=%s",this.getNombre(), this.getIniciales(), this.getDni(), this.getCorreo(), this.getTelefono(), this.getFechaNacimiento().format(DateTimeFormatter.ofPattern(FORMATO_FECHA)));
+    }
+
     @Override
     public String toString() {
 
-        return String.format("Número de Identificación del Alumnado (NIA)=%s " + "nombre=%s (%s), DNI=%s, correo=%s, teléfono=%s, fecha nacimiento=%s", this.getNia(), this.getNombre(), this.getIniciales(), this.getDni(), this.getCorreo(), this.getTelefono(), this.getFechaNacimiento().format(DateTimeFormatter.ofPattern(FORMATO_FECHA)));
+        return String.format("Número de Identificación del Alumnado (NIA)=%s " + "nombre=%s (%s), DNI=%s, correo=%s, teléfono=%s, fecha nacimiento=%s", this.getNia(), imprimir());
     }
 }
