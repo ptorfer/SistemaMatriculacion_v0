@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Actualización">
+    <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Creación clase Asignaturas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Asignaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Asignaturas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,7 @@
     "Gradle.AlumnoTest.executor": "Run",
     "Gradle.AlumnosTest.executor": "Run",
     "Gradle.CicloFormativoTest.executor": "Run",
+    "Gradle.CiclosFormativosTest.executor": "Run",
     "Gradle.CursoTest.executor": "Run",
     "Gradle.EspecialidadProfesoradoTest.executor": "Run",
     "Gradle.MatriculaTest.executor": "Run",
@@ -79,7 +81,7 @@
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.MatriculasTest">
+  <component name="RunManager" selected="Gradle.CiclosFormativosTest">
     <configuration name="AlumnoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -128,7 +130,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EspecialidadProfesoradoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CiclosFormativosTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.iesalandalus.programacion.matriculacion.dominio.EspecialidadProfesoradoTest&quot;" />
+            <option value="&quot;org.iesalandalus.programacion.matriculacion.negocio.CiclosFormativosTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CiclosFormativosTest" />
         <item itemvalue="Gradle.MatriculasTest" />
         <item itemvalue="Gradle.AlumnosTest" />
         <item itemvalue="Gradle.AlumnoTest" />
         <item itemvalue="Gradle.MatriculaTest" />
-        <item itemvalue="Gradle.EspecialidadProfesoradoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731873363871</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Creación clase Asignaturas">
+      <option name="closed" value="true" />
+      <created>1731874329507</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731874329507</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -344,6 +354,7 @@
     <MESSAGE value="Creación clase Alumnos" />
     <MESSAGE value="Creación clase Matriculas" />
     <MESSAGE value="Actualización" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
+    <MESSAGE value="Creación clase Asignaturas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creación clase Asignaturas" />
   </component>
 </project>
