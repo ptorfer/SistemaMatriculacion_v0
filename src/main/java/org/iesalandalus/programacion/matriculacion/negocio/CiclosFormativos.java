@@ -67,7 +67,7 @@ public class CiclosFormativos {
 
         int indice = 0;
         boolean cicloFormativoEncontrado = false;
-        while (!tamanoSuperado(indice) && !cicloFormativoEncontrado) {
+        while (!tamanoSuperado(indice)) {
             if (get()[indice].equals(cicloFormativo)) {
                 cicloFormativoEncontrado = true;
             } else {

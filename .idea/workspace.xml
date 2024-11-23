@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f8163d55-837d-4f82-b597-bd87b992ee6d" name="Changes" comment="Actualización">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Asignaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/Asignaturas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Alumno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Asignatura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/dominio/Matricula.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/negocio/CiclosFormativos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/vista/Opcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/vista/Opcion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/vista/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/matriculacion/vista/Consola.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,27 +63,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AlumnoTest.executor": "Run",
-    "Gradle.AlumnosTest.executor": "Run",
-    "Gradle.CicloFormativoTest.executor": "Run",
-    "Gradle.CiclosFormativosTest.executor": "Run",
-    "Gradle.CursoTest.executor": "Run",
-    "Gradle.EspecialidadProfesoradoTest.executor": "Run",
-    "Gradle.MatriculaTest.executor": "Run",
-    "Gradle.MatriculasTest.executor": "Run",
-    "Gradle.Tests in 'SistemaMatriculacion_v0.test'.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/patri/Documents/Z5_Otros/1.DAM/PR/Unidad 4/A. ReservasHotel_v0",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.32988507",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AlumnoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AlumnosTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CicloFormativoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CiclosFormativosTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CursoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EspecialidadProfesoradoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MatriculaTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MatriculasTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'SistemaMatriculacion_v0.test'.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/patri/Documents/Z1_2DAM/PR/1.Trimestre/Unidad4&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32988507&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.CiclosFormativosTest">
     <configuration name="AlumnoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -361,7 +363,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731875360066</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Creación enumerado Opción.">
+      <option name="closed" value="true" />
+      <created>1731882616993</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1731882616993</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Actualización">
+      <option name="closed" value="true" />
+      <created>1731882644699</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731882644699</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -372,6 +390,7 @@
     <MESSAGE value="Creación clase Matriculas" />
     <MESSAGE value="Creación clase Asignaturas" />
     <MESSAGE value="Creación clase CiclosFormativos" />
+    <MESSAGE value="Creación enumerado Opción." />
     <MESSAGE value="Actualización" />
     <option name="LAST_COMMIT_MESSAGE" value="Actualización" />
   </component>

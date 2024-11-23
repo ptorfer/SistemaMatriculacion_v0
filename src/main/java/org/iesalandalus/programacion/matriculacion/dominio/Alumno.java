@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class Alumno {
 
     //Atributos
-    private static final String ER_TELEFONO = "[968]?[0-9]{8}";
+    private static final String ER_TELEFONO = "[9678][0-9]{8}";
     private static final String ER_CORREO = "\\w+[\\.\\w]*@\\w+[\\.\\w]*\\.\\w{2,5}\\b\\s?";
     private static final String ER_DNI = "([0-9]{8})([A-Za-z])";
     public static final String FORMATO_FECHA = "dd/MM/YYYY";
@@ -26,7 +26,7 @@ public class Alumno {
     private String nia;
 
     //Constructores
-    public Alumno(String nomobre, String dni, String correo, String telefono, LocalDate fechaNacimiento){
+    public Alumno(String nombre, String dni, String correo, String telefono, LocalDate fechaNacimiento){
         setNombre(nombre);
         setDni(dni);
         setCorreo(correo);
@@ -84,7 +84,7 @@ public class Alumno {
         if (nombre.isEmpty()){
             throw new IllegalArgumentException("ERROR: El nombre de un alumno no puede estar vacío.");
         }
-        String iniciales=this.getIniciales();
+
         this.nombre= formateaNombre(nombre);
     }
 

@@ -43,7 +43,8 @@ public class Asignatura {
     //Métodos
 
     public CicloFormativo getCicloFormativo() {
-        return cicloFormativo;
+        //Utilizo el new para crear una copia y así cotrolar bien cuando se hagan las copias profundas.
+        return new CicloFormativo (cicloFormativo);
     }
 
     public void setCicloFormativo(CicloFormativo cicloFormativo) {

@@ -118,7 +118,8 @@ public class Matricula {
     }
 
     public Alumno getAlumno() {
-        return alumno;
+        //Utilizo el new para crear una copia y así cotrolar bien cuando se hagan las copias profundas.
+        return new Alumno (alumno);
     }
 
     public void setAlumno(Alumno alumno) {
